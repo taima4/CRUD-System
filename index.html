@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD System</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<style>
+  .errorName {
+    display:none;
+  }
+  .errorCategory {
+    display:none;
+  } 
+  .errorPrice {
+    display:none;
+  }
+  #update{
+    display:none;
+  }
+</style>
+</head>
+
+<body>
+
+    <div class="add-course">
+        <div class="container">
+            <h1>CRUD System</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="">course name <span class="text-danger">*</span> </label>
+                    <input class="inputs form-control" type="text" placeholder="cource name" id="courseName">
+                    <p class="text-danger  errorName">*please start with capital letter and name must be between 3 and 10
+                        chars</p>
+                </div>
+                <label for="">course category</label>
+                <input class="inputs form-control" type="text" placeholder="cource category" id="courseCategory">
+                <p class="text-danger  errorCategory">*please start with capital letter and category must be between 3 and 20
+                    chars
+                </p>
+                <label for="">course price</label>
+                <input class="inputs form-control" type="number" placeholder="cource price" id="coursePrice">
+                <p class="text-danger  errorPrice">*price must be between 100 - 9999
+                </p>
+                <label for="">course description</label>
+                <textarea class="inputs form-control" placeholder="course description"
+                    id="courseDescription"></textarea>
+                <label for="">course capacity</label>
+                <input class="inputs form-control" type="number" placeholder="cource capacity" id="courseCapacity">
+
+                <input type="submit" value="Add Course" class="btn btn-outline-secondary mt-3 " id="click" disabled />
+                <input type="submit" value="update" class="btn btn-outline-info mt-3 " id="update"  />
+                <button class="btn btn-outline-secondary mt-3" type="reset" id="resetbtn">clear</button>
+            </form>
+        </div>
+        <div class="container">
+            <input type="search" placeholder="search..." id="search" class="form-control my-3">
+
+            <table class="table table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>name</th>
+                        <th>category</th>
+                        <th>price</th>
+                        <th>description</th>
+                        <th>capacity</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+                <button id="deleteBtn" class="btn btn-outline-danger text-center my-3">delete all</button>
+                <tbody id="data">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- bootstrap js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
